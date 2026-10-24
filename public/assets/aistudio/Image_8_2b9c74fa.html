@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#0b1c30", "surface-bright": "#f8f9ff", "on-primary-fixed-variant": "#264774", "secondary-fixed-dim": "#abc7ff", "surface-container-low": "#eff4ff", "on-error": "#ffffff", "on-background": "#0b1c30", "on-secondary-fixed": "#001b3f", "on-secondary-fixed-variant": "#004590", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-secondary-container": "#00285a", "outline": "#737780", "outline-variant": "#c3c6d0", "primary-fixed-dim": "#a8c8fc", "secondary-container": "#488ffd", "surface-container-highest": "#d3e4ff", "surface": "#f8f9ff", "tertiary-container": "#00451a", "secondary-fixed": "#d7e2ff", "on-surface-variant": "#43474f", "tertiary-fixed": "#7ffc97", "on-primary-container": "#86a6d8", "tertiary-fixed-dim": "#62df7d", "surface-container": "#e6eeff", "surface-variant": "#d3e4ff", "primary-container": "#173b67", "on-primary": "#ffffff", "surface-container-high": "#dce9ff", "on-error-container": "#93000a", "background": "#f8f9ff", "error": "#ba1a1a", "inverse-on-surface": "#eaf1ff", "on-primary-fixed": "#001c3b", "on-tertiary-fixed-variant": "#005320", "inverse-primary": "#a8c8fc", "secondary": "#005cbd", "on-tertiary-fixed": "#002109", "inverse-surface": "#213146", "primary-fixed": "#d5e3ff", "on-tertiary-container": "#3bbc5f", "primary": "#00254b", "on-secondary": "#ffffff", "surface-dim": "#cbdbf6", "surface-tint": "#3f5f8d", "tertiary": "#002c0e" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "margin": "1rem", "gutter": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem" }, fontFamily: { "label-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "display-currency": ["Inter"], "label-sm": ["Inter"] }, fontSize: { "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "display-currency": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><button aria-label="Retour" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md text-on-surface tracking-tight truncate">Ajouter Boisson</h1></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-[0_1px_3px_rgba(23,32,51,0.08)] hover:bg-primary-container transition-colors"><span class="material-symbols-outlined text-[18px]">check</span><span>Enregistrer</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-24 space-y-space-lg">
+<!-- En-tête Fiche Produit -->
+<div class="flex flex-col gap-space-xs pt-1">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        ID: PRD-042
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+        Actif au catalogue
+      </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">Fiche Produit : Modification</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Renseignez les données techniques, tarifaires et seuils de stock du dépôt.</p>
+</div>
+<!-- Aperçu Produit & Photo Mini-Hero -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-high shadow-sm p-space-md flex items-center gap-space-md">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A commercial beverage warehouse crate with amber glass bottles labeled Castel Beer in bright tropical warehouse lighting in Cameroon with clean modern focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbaB9R8o7cVNiOHios9TulFSV7O9Qs_HtvH5ZGuwzslKMjGe86axy5h5MTH4ozCuX_S8oVm96NRdtM_P7I2PsaTg0JQy6adj-r7Uwx3LyY0N0ydpEgYKXs-3W57HqRlRoBp8bNZx11NQUv_KkqIzA8dD4X7WjWHH5ovWiEDtsFBGA6SOvJLC0NJHmObf2BjFurdL7M9txNcGFWCtf84J43FmZ1iEVlcfbh7YRYH_GlXbNkOEoGiIzqkg"/>
+</div>
+<div class="flex flex-col justify-center min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Castel Beer</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">65 cl</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">Casier 12 × 65cl Brasserie</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">Rayon A</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dernière modif : Hier 16:40</span>
+</div>
+</div>
+</div>
+<!-- Section 1 : Informations Générales & Conditionnement -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-1 border-b border-transparent">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">1. Identification &amp; Emballage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Caractéristiques logistiques principales</p>
+</div>
+</div>
+<!-- Nom commercial -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="prod_name">
+<span>Nom commercial du produit <span class="text-error">*</span></span>
+<span class="text-on-surface-variant font-body-sm text-[11px]">Obligatoire</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-lg text-body-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="prod_name" type="text" value="Castel Beer 65cl"/>
+<span class="absolute right-3 material-symbols-outlined text-outline text-[18px]">sports_bar</span>
+</div>
+</div>
+<!-- Catégorie -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="prod_category">Catégorie <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full h-11 px-3.5 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="prod_category">
+<option selected="">Bières &amp; Cidres</option>
+<option>Boissons Gazeuses</option>
+<option>Eaux Minérales</option>
+<option>Alcools &amp; Vins</option>
+</select>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant text-[20px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Sélecteur Type Emballage -->
+<div class="flex flex-col gap-2 pt-1">
+<label class="font-label-md text-label-md text-on-surface">Type de conditionnement au dépôt <span class="text-error">*</span></label>
+<!-- Option Casier Consigné (Actif) -->
+<label class="flex flex-col p-3 rounded-lg bg-surface-container cursor-pointer transition-all">
+<div class="flex items-start gap-3">
+<input checked="" class="mt-1 accent-primary shrink-0 w-4 h-4" name="packaging_type" type="radio" value="consigne"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Casier Consigné (Verre réutilisable)</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">recycling</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Implique un suivi strict du retour d'emballages vides et caution client.</p>
+</div>
+</div>
+<!-- Sous-paramètres du casier -->
+<div class="grid grid-cols-2 gap-space-sm mt-3 pt-2.5 bg-surface-container-lowest/60 rounded-md p-2">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bouteilles / casier</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded bg-surface-container-high text-on-surface font-headline-sm flex items-center justify-center" type="button">-</button>
+<input class="w-10 h-8 text-center font-headline-sm text-headline-sm text-on-surface bg-transparent focus:outline-none" readonly="" type="number" value="12"/>
+<button class="w-8 h-8 rounded bg-surface-container-high text-on-surface font-headline-sm flex items-center justify-center" type="button">+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Valeur caution</span>
+<div class="h-8 flex items-center px-2 rounded bg-surface-container text-on-surface font-label-md text-label-md">
+              3 000 FCFA
+            </div>
+</div>
+</div>
+</label>
+<!-- Option Emballage Perdu (Inactif) -->
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low cursor-pointer transition-all">
+<input class="mt-1 accent-primary shrink-0 w-4 h-4" name="packaging_type" type="radio" value="perdu"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Emballage Perdu / Pack jetable</span>
+<span class="material-symbols-outlined text-outline text-[16px]">takeout_dining</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Carton, pack canettes, bouteilles PET non soumises à la consigne.</p>
+</div>
+</label>
+</div>
+<!-- Code-barres / EAN -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="barcode_val">Code-barres / EAN-13</label>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container" id="barcode_val" type="text" value="6151100123456"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[18px]">barcode</span>
+</div>
+<button class="h-11 px-3 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center gap-1.5 shrink-0 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+<span>Scanner</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 2 : Tarification & Marges (Permissions Admin) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between pb-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">2. Tarification &amp; Marges</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rentabilité et grille d'encaissement</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]" title="Accès Sécurisé">lock</span>
+</div>
+<!-- Mention Permission Habilitée -->
+<div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-high text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<p class="font-label-sm text-label-sm">Réservé aux gérants et administrateurs habilités</p>
+</div>
+<!-- Grille Prix Achat / Vente -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Prix Achat -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="buy_price">Prix d'achat <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 pr-14 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container" id="buy_price" type="number" value="6400"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">FCFA</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Fournisseur / usine</span>
+</div>
+<!-- Prix Vente -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="sell_price">Prix de vente <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 pr-14 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container" id="sell_price" type="number" value="7800"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">FCFA</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Comptoir / casier</span>
+</div>
+</div>
+<!-- Calculateur automatique de marge en direct -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Marge brute estimée</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+          Rentabilité optimale
+        </span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-display-currency text-[22px] font-bold text-on-surface">+1 400</span>
+<span class="font-label-md text-label-md text-outline">FCFA</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">+17.95 %</span>
+</div>
+<!-- Barre visuelle de marge -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 58%;"></div>
+</div>
+</div>
+<!-- Prix au détail unitaire -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="bottle_price">Prix de vente bouteille individuelle</label>
+<span class="text-on-surface-variant font-label-sm text-[11px] bg-surface-container px-1.5 py-0.5 rounded">Optionnel</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 px-3.5 pr-14 rounded-lg bg-surface-container-low text-on-surface font-body-lg text-body-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container" id="bottle_price" type="number" value="650"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">FCFA</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Applicable pour les ventes au comptoir sans casier complet.</p>
+</div>
+</section>
+<!-- Section 3 : Paramètres de Stock & Seuil d'Alerte -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-1">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">warehouse</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">3. Stock &amp; Alertes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gestion de l'inventaire et logistique</p>
+</div>
+</div>
+<!-- Stock initial & Seuil Alerte -->
+<div class="grid grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="init_stock">Stock en magasin <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 pr-14 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm focus:outline-none" id="init_stock" type="number" value="84"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">Casiers</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="alert_threshold">Seuil d'alerte <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 pr-14 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm focus:outline-none" id="alert_threshold" type="number" value="15"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-error">Casiers</span>
+</div>
+</div>
+</div>
+<!-- Explication Seuil Alerte -->
+<div class="flex items-start gap-2 p-2.5 rounded-lg bg-surface-container text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">notification_important</span>
+<span>Alerter le gestionnaire du dépôt par SMS et badge rouge dès que le stock physique descend sous <strong>15 casiers</strong>.</span>
+</div>
+<!-- Emplacement au dépôt -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="depot_location">Emplacement au dépôt</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none" id="depot_location" type="text" value="Allée B - Travée 04"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[18px]">pin_drop</span>
+</div>
+</div>
+</section>
+<!-- Section 4 : Règles de Validation & Aide contextuelle -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">info</span>
+<span class="font-label-md text-label-md">Règles de validation automatique</span>
+</div>
+<ul class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant pl-6 list-disc">
+<li>Le prix de vente (7 800 FCFA) doit être strictement supérieur au prix d'achat fournisseur (6 400 FCFA).</li>
+<li>Les champs marqués par un astérisque (<span class="text-error font-bold">*</span>) sont indispensables pour la clôture journalière.</li>
+</ul>
+</div>
+<!-- Boutons d'Action Inférieurs -->
+<div class="flex flex-col gap-2.5 pt-2">
+<!-- Action Principale -->
+<button class="w-full h-[50px] rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-md active:opacity-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Enregistrer les modifications</span>
+</button>
+<!-- Action Secondaire -->
+<button class="w-full h-11 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Annuler et revenir au catalogue</span>
+</button>
+</div>
+</div></main></body></html>

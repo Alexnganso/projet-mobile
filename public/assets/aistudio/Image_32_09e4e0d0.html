@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;font-family:'Inter',sans-serif;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 0.5rem);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-secondary': '#ffffff', 'on-primary-fixed-variant': '#264774', 'outline': '#737780', 'secondary-fixed-dim': '#abc7ff', 'inverse-primary': '#a8c8fc', 'on-secondary-fixed': '#001b3f', 'secondary-fixed': '#d7e2ff', 'primary': '#00254b', 'surface': '#f8f9ff', 'tertiary': '#002c0e', 'tertiary-fixed-dim': '#62df7d', 'surface-variant': '#d3e4ff', 'on-primary-fixed': '#001c3b', 'outline-variant': '#c3c6d0', 'on-primary': '#ffffff', 'on-background': '#0b1c30', 'on-surface-variant': '#43474f', 'surface-tint': '#3f5f8d', 'surface-container-lowest': '#ffffff', 'on-tertiary-container': '#3bbc5f', 'on-error': '#ffffff', 'secondary': '#005cbd', 'error': '#ba1a1a', 'on-primary-container': '#86a6d8', 'surface-dim': '#cbdbf6', 'tertiary-fixed': '#7ffc97', 'on-tertiary-fixed-variant': '#005320', 'inverse-surface': '#213146', 'primary-container': '#173b67', 'tertiary-container': '#00451a', 'primary-fixed-dim': '#a8c8fc', 'on-secondary-fixed-variant': '#004590', 'on-surface': '#0b1c30', 'surface-bright': '#f8f9ff', 'surface-container-high': '#dce9ff', 'primary-fixed': '#d5e3ff', 'background': '#f8f9ff', 'surface-container-low': '#eff4ff', 'error-container': '#ffdad6', 'on-tertiary': '#ffffff', 'on-tertiary-fixed': '#002109', 'on-secondary-container': '#00285a', 'on-error-container': '#93000a', 'inverse-on-surface': '#eaf1ff', 'secondary-container': '#488ffd', 'surface-container': '#e6eeff', 'surface-container-highest': '#d3e4ff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter': '0.75rem', 'space-sm': '0.5rem', 'space-xl': '1.5rem', 'margin': '1rem', 'space-lg': '1rem', 'space-xs': '0.25rem', 'space-md': '0.75rem' }, fontFamily: { 'label-md': ['Inter'], 'headline-sm': ['Inter'], 'label-lg': ['Inter'], 'headline-md': ['Inter'], 'headline-lg': ['Inter'], 'display-currency': ['Inter'], 'body-md': ['Inter'], 'body-sm': ['Inter'], 'body-lg': ['Inter'], 'label-sm': ['Inter'] }, fontSize: { 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-sm': ['16px', { lineHeight: '22px', fontWeight: '600' }], 'label-lg': ['14px', { lineHeight: '18px', fontWeight: '600' }], 'headline-md': ['18px', { lineHeight: '24px', fontWeight: '600' }], 'headline-lg': ['22px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '700' }], 'display-currency': ['28px', { lineHeight: '34px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'body-lg': ['15px', { lineHeight: '22px', fontWeight: '400' }], 'label-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-6 px-margin flex items-center justify-between text-on-surface-variant font-label-sm"><span class="tracking-tight font-label-md text-on-surface">09:42</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[13px]">network_cell</span><span class="font-label-sm uppercase tracking-wide">4G</span><span class="material-symbols-outlined text-[14px] ml-space-xs">battery_charging_90</span><span>92%</span></div></div><div class="h-14 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="DepotManager Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1UIgunQzDnRHe9eHsP6sXJ2bdli3ulGG0qLFdnu-L71uPACRG4ulUwPmpg_m8f9KF5i58Pxd0IO8P-b37aDAs4ICUsPCjllBu6q1dhAnmhopELRsb0KzxiYxKjocwwiFrswu5flz1IZLtR0W_DcQi_IXsED-kjO6iWiKEIn5D9tFIAZr1izHjUzuxflRD4YZnPbChfo8Ihv0ZrXeVft2AG5OlqwsVLzTRPiRBhyGEu5Kl5KdUoYDeQd38ZW"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><button class="flex items-center gap-1 text-left min-w-0 focus:outline-none"><span class="font-headline-sm text-primary truncate max-w-[130px]">Dépôt Central - Akwa</span><span class="material-symbols-outlined text-secondary text-[16px]">expand_more</span></button><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-tertiary-fixed/30 text-tertiary text-[10px] font-label-sm shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>En ligne</span></div><div class="flex items-center gap-1.5"><span class="font-label-sm text-outline uppercase tracking-wider truncate">Accueil Dashboard</span><span class="text-[10px] text-outline">•</span><span class="font-label-sm text-secondary truncate">Vendeur - Caissier</span></div></div></div><div class="flex items-center gap-space-sm shrink-0"><button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container text-[20px] transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-20 pb-24 bg-surface max-w-[430px] mx-auto"><div class="flex flex-col w-full pb-10 space-y-space-lg">
+<!-- Section 1 : Salutation & Contexte Opérationnel -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-primary truncate">Bonjour, Roger Fotso</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm shrink-0">Gérant</span>
+</div>
+<span class="font-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">calendar_today</span>
+          Jeudi 26 Octobre 2023
+        </span>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+</div>
+<!-- État Système & Hybride -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant font-label-sm">
+<div class="flex items-center gap-1.5 truncate">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container shrink-0"></span>
+<span class="truncate text-on-surface font-semibold">Serveur local synchronisé</span>
+</div>
+<span class="text-secondary shrink-0 font-medium">Mode Hybride</span>
+</div>
+<!-- Sélecteur de rôle interactif (Habilitations) -->
+<div class="grid grid-cols-3 gap-1 p-0.5 bg-surface-container-low rounded-lg font-label-md" id="role-selector">
+<button class="py-1.5 px-2 rounded-md bg-primary text-on-primary text-center truncate shadow-sm transition-all" id="role-btn-admin" onclick="switchRole('admin')">
+        Administrateur
+      </button>
+<button class="py-1.5 px-2 rounded-md text-on-surface-variant hover:text-on-surface text-center truncate transition-all" id="role-btn-cashier" onclick="switchRole('cashier')">
+        Vendeur/Caisse
+      </button>
+<button class="py-1.5 px-2 rounded-md text-on-surface-variant hover:text-on-surface text-center truncate transition-all" id="role-btn-stock" onclick="switchRole('stock')">
+        Stockiste
+      </button>
+</div>
+</section>
+<!-- Bannière simulation d'états (Mode Démo UX) -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-secondary-fixed/40 rounded-lg text-on-secondary-fixed font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span>Simulateur d'états d'exploitation :</span>
+</div>
+<select class="bg-surface-container-lowest text-primary text-[11px] font-label-sm py-0.5 px-1.5 rounded border-0 outline-none" onchange="simulateState(this.value)">
+<option value="normal">Normal (Midi)</option>
+<option value="empty">Début de vacation (0 Vente)</option>
+<option value="offline">Hors Ligne (Quai déconnecté)</option>
+</select>
+</div>
+<!-- État Déconnecté (Masqué par défaut) -->
+<div class="hidden flex items-center justify-between p-space-sm bg-error-container text-on-error-container rounded-lg font-label-sm" id="offline-banner">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-error">cloud_off</span>
+<span>Connexion internet coupée. Enregistrement local actif.</span>
+</div>
+<span class="font-bold underline cursor-pointer" onclick="simulateState('normal')">Réessayer</span>
+</div>
+<!-- Section 2 : Cartes KPIs Synthétiques -->
+<section class="flex flex-col gap-space-sm" id="section-kpis">
+<!-- KPI Principal : Chiffre d'Affaires du Jour -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm" id="main-kpi-card">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-outline uppercase tracking-wider">Chiffre d'Affaires du Jour</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-display-currency text-on-surface" id="ca-val">3 850 000</span>
+<span class="font-headline-sm text-on-surface-variant">FCFA</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+          +18.4%
+        </span>
+</div>
+<!-- Jauges Cash vs Crédit -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 76%"></div>
+<div class="bg-secondary-container h-full transition-all duration-500" style="width: 24%"></div>
+</div>
+<div class="flex justify-between items-center font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<span class="text-on-surface">Comptant : <strong class="font-semibold">2 920 000 FCFA</strong></span>
+<span class="text-outline">(76%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container shrink-0"></span>
+<span class="text-on-surface">Crédit : <strong class="font-semibold">930 000 FCFA</strong></span>
+<span class="text-outline">(24%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Grille 3 KPIs Compacts -->
+<div class="grid grid-cols-3 gap-space-xs">
+<!-- Ventes -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-outline uppercase truncate">Ventes</span>
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div class="my-1">
+<div class="font-headline-sm text-on-surface truncate" id="kpi-orders-count">48</div>
+<span class="font-label-sm text-on-surface-variant block truncate">Moy: 80,2k</span>
+</div>
+<span class="text-[10px] text-on-tertiary-container font-semibold truncate">Normal</span>
+</div>
+<!-- Sous Seuil -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-error">
+<span class="font-label-sm text-outline uppercase truncate">Sous Seuil</span>
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div class="my-1">
+<div class="font-headline-sm text-error truncate">4 réf.</div>
+<span class="font-label-sm text-on-surface-variant block truncate">Castel, Beaufort...</span>
+</div>
+<span class="text-[10px] text-error font-semibold uppercase truncate">Urgence stock</span>
+</div>
+<!-- Crédits en Souffrance -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary">
+<span class="font-label-sm text-outline uppercase truncate">Crédits &gt; 48h</span>
+<span class="material-symbols-outlined text-[18px]">hourglass_bottom</span>
+</div>
+<div class="my-1">
+<div class="font-headline-sm text-on-surface truncate">1,65M</div>
+<span class="font-label-sm text-on-surface-variant block truncate">8 débiteurs</span>
+</div>
+<span class="text-[10px] text-outline font-semibold truncate">À relancer</span>
+</div>
+</div>
+</section>
+<!-- Section 3 : Graphique 7 Jours (HTML/CSS & Barres de répartition) -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md" id="section-analytics">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-primary">Activité sur 7 Jours</span>
+<span class="font-label-sm text-outline">Semaine 43 • Total : 24,8M FCFA</span>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-low text-secondary font-label-sm font-semibold">Semaine</span>
+</div>
+<!-- Histogramme Stylisé -->
+<div class="flex items-end justify-between h-36 pt-4 pb-2 px-1 gap-2">
+<!-- Ven -->
+<div class="flex-1 flex flex-col items-center h-full justify-end gap-1 group cursor-pointer">
+<div class="text-[9px] font-semibold text-outline">2,9M</div>
+<div class="w-full max-w-[28px] rounded-t-sm flex flex-col overflow-hidden bg-surface-container">
+<div class="bg-secondary-container h-3 w-full"></div>
+<div class="bg-primary-container h-14 w-full"></div>
+</div>
+<span class="font-label-sm text-on-surface-variant">Ven</span>
+</div>
+<!-- Sam (Pic) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end gap-1 group cursor-pointer relative">
+<div class="absolute -top-3 bg-primary text-on-primary text-[8px] px-1 py-0.5 rounded font-bold shadow-sm whitespace-nowrap">
+          4,9M (Pic)
+        </div>
+<div class="text-[9px] font-bold text-secondary">4,9M</div>
+<div class="w-full max-w-[28px] rounded-t-sm flex flex-col overflow-hidden bg-surface-container">
+<div class="bg-secondary-container h-6 w-full"></div>
+<div class="bg-secondary h-24 w-full"></div>
+</div>
+<span class="font-label-sm text-secondary font-bold">Sam</span>
+</div>
+<!-- Dim -->
+<div class="flex-1 flex flex-col items-center h-full justify-end gap-1 group cursor-pointer">
+<div class="text-[9px] font-semibold text-outline">3,4M</div>
+<div class="w-full max-w-[28px] rounded-t-sm flex flex-col overflow-hidden bg-surface-container">
+<div class="bg-secondary-container h-4 w-full"></div>
+<div class="bg-primary-container h-16 w-full"></div>
+</div>
+<span class="font-label-sm text-on-surface-variant">Dim</span>
+</div>
+<!-- Lun -->
+<div class="flex-1 flex flex-col items-center h-full justify-end gap-1 group cursor-pointer">
+<div class="text-[9px] font-semibold text-outline">2,1M</div>
+<div class="w-full max-w-[28px] rounded-t-sm flex flex-col overflow-hidden bg-surface-container">
+<div class="bg-secondary-container h-3 w-full"></div>
+<div class="bg-primary-container h-10 w-full"></div>
+</div>
+<span class="font-label-sm text-on-surface-variant">Lun</span>
+</div>
+<!-- Mar -->
+<div class="flex-1 flex flex-col items-center h-full justify-end gap-1 group cursor-pointer">
+<div class="text-[9px] font-semibold text-outline">3,1M</div>
+<div class="w-full max-w-[28px] rounded-t-sm flex flex-col overflow-hidden bg-surface-container">
+<div class="bg-secondary-container h-4 w-full"></div>
+<div class="bg-primary-container h-15 w-full"></div>
+</div>
+<span class="font-label-sm text-on-surface-variant">Mar</span>
+</div>
+<!-- Mer -->
+<div class="flex-1 flex flex-col items-center h-full justify-end gap-1 group cursor-pointer">
+<div class="text-[9px] font-semibold text-outline">3,2M</div>
+<div class="w-full max-w-[28px] rounded-t-sm flex flex-col overflow-hidden bg-surface-container">
+<div class="bg-secondary-container h-4 w-full"></div>
+<div class="bg-primary-container h-16 w-full"></div>
+</div>
+<span class="font-label-sm text-on-surface-variant">Mer</span>
+</div>
+<!-- Jeu (Aujourd'hui) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end gap-1 group cursor-pointer bg-primary-fixed/20 rounded-md pb-0.5">
+<div class="text-[9px] font-bold text-primary">3,8M</div>
+<div class="w-full max-w-[28px] rounded-t-sm flex flex-col overflow-hidden shadow-sm">
+<div class="bg-secondary-container h-5 w-full"></div>
+<div class="bg-primary h-20 w-full"></div>
+</div>
+<span class="font-label-sm text-primary font-bold">Auj</span>
+</div>
+</div>
+<!-- Légende du Graphique -->
+<div class="flex items-center justify-center gap-space-md pt-space-xs font-label-sm border-t-0 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary"></span>
+<span>Comptant (Cash/MoMo)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary-container"></span>
+<span>À Crédit</span>
+</div>
+</div>
+</section>
+<!-- Section 4 : Alertes Prioritaires de Supervision -->
+<section class="flex flex-col gap-space-sm" id="section-alerts">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[20px]">notification_important</span>
+        Points d'Attention (3)
+      </span>
+<span class="font-label-sm text-secondary font-semibold">Priorité Haute</span>
+</div>
+<!-- Alerte 1 : Rupture Critique Stock -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs border-l-4 border-l-error">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+<div>
+<h4 class="font-label-lg text-on-surface">Rupture Stock Éminente</h4>
+<p class="font-body-sm text-on-surface-variant">Castel Beer 65cl (3 casiers restants)</p>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm shrink-0">Critique</span>
+</div>
+<div class="flex items-center justify-between mt-1 pt-1">
+<span class="font-label-sm text-outline">+3 autres références sous le seuil</span>
+<button class="px-2.5 py-1 rounded-md bg-primary text-on-primary font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+          Réapprovisionner
+        </button>
+</div>
+</div>
+<!-- Alerte 2 : Casiers & Emballages Consignés -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">cases</span>
+</div>
+<div>
+<h4 class="font-label-lg text-on-surface">210 Casiers Non Retournés</h4>
+<p class="font-body-sm text-on-surface-variant">Dette emballages estimée : <strong class="text-on-surface">630 000 FCFA</strong></p>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm shrink-0">Emballages</span>
+</div>
+<div class="flex items-center justify-end mt-1">
+<button class="font-label-sm text-secondary font-semibold flex items-center gap-0.5">
+          Voir les 12 dépositaires
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Alerte 3 : Dépassement Plafond Crédit -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">credit_card_off</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-label-lg text-on-surface truncate">Plafond Crédit Dépassé</h4>
+<p class="font-body-sm text-on-surface-variant truncate">Bar Le Balafon (+45 000 FCFA au-delà)</p>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm shrink-0">Risque</span>
+</div>
+<div class="flex items-center justify-between mt-1 pt-1">
+<span class="font-label-sm text-error font-medium">Bloquer les livraisons à terme</span>
+<button class="px-2 py-1 rounded bg-surface-container-low text-primary font-label-sm font-semibold">
+          Fiche Client
+        </button>
+</div>
+</div>
+</section>
+<!-- Section 5 : Raccourcis d'Exploitation Globale -->
+<section class="flex flex-col gap-space-sm">
+<span class="font-headline-sm text-primary">Accès Rapides</span>
+<!-- Bouton Proéminent Nouvelle Vente -->
+<button class="w-full h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center gap-2 shadow-md hover:bg-primary transition-all active:scale-[0.99]">
+<span class="material-symbols-outlined text-[22px]">point_of_sale</span>
+<span class="font-headline-sm">Nouvelle Vente / Encaissement</span>
+</button>
+<!-- Grille de 4 Boutons Utilitaires -->
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-center gap-2 text-left hover:bg-surface-container-low transition-colors">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">category</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-on-surface block truncate">Catalogue</span>
+<span class="font-body-sm text-outline block truncate">Prix &amp; Fiches</span>
+</div>
+</button>
+<button class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-center gap-2 text-left hover:bg-surface-container-low transition-colors">
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/40 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">swap_vert</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-on-surface block truncate">Mouvements</span>
+<span class="font-body-sm text-outline block truncate">Réception Camion</span>
+</div>
+</button>
+<button class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-center gap-2 text-left hover:bg-surface-container-low transition-colors">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">contacts</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-on-surface block truncate">Clients &amp; Dettes</span>
+<span class="font-body-sm text-outline block truncate">Comptes actifs</span>
+</div>
+</button>
+<button class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-center gap-2 text-left hover:bg-surface-container-low transition-colors">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-on-surface block truncate">Tournées Quais</span>
+<span class="font-body-sm text-outline block truncate">Bordereaux</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Section 6 : Cinq Dernières Ventes Récentes -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-primary">Dernières Ventes</span>
+<span class="font-label-sm text-outline">(48 transactions)</span>
+</div>
+<a class="font-label-sm text-secondary font-semibold hover:underline" href="#">Voir tout</a>
+</div>
+<!-- Liste des transactions -->
+<div class="flex flex-col gap-space-xs" id="transactions-list">
+<!-- 1. Balafon -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm">
+<span class="font-medium text-primary">#VF-2023-0942</span>
+<span>11:24</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-on-surface truncate">Bar Restaurant Le Balafon</span>
+<span class="font-body-sm text-on-surface-variant truncate">24 casiers (Castel, Beaufort)</span>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-sm text-on-surface font-bold">312 000 FCFA</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+              Orange Money
+            </span>
+</div>
+</div>
+</div>
+<!-- 2. Client Comptoir #08 -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm">
+<span class="font-medium text-primary">#VF-2023-0941</span>
+<span>11:10</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-on-surface truncate">Client Comptoir #08</span>
+<span class="font-body-sm text-on-surface-variant truncate">4 casiers Top Ananas</span>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-sm text-on-surface font-bold">31 200 FCFA</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+              Espèces (Cash)
+            </span>
+</div>
+</div>
+</div>
+<!-- 3. Snack Bar La Détente (Crédit) -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm">
+<span class="font-medium text-primary">#VF-2023-0940</span>
+<span>10:45</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-on-surface truncate">Snack Bar La Détente</span>
+<span class="font-body-sm text-on-surface-variant truncate">15 casiers divers</span>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-sm text-on-surface font-bold">185 000 FCFA</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm">
+              À Crédit (28/10)
+            </span>
+</div>
+</div>
+</div>
+<!-- 4. Dépôt Relais New-Bell -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm">
+<span class="font-medium text-primary">#VF-2023-0939</span>
+<span>10:15</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-on-surface truncate">Dépôt Relais New-Bell</span>
+<span class="font-body-sm text-on-surface-variant truncate">40 casiers panachés</span>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-sm text-on-surface font-bold">520 000 FCFA</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+              MTN MoMo
+            </span>
+</div>
+</div>
+</div>
+<!-- 5. Cave Akwa Palace -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm">
+<span class="font-medium text-primary">#VF-2023-0938</span>
+<span>09:50</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-on-surface truncate">Cave Akwa Palace</span>
+<span class="font-body-sm text-on-surface-variant truncate">8 casiers Guinness &amp; Kadji</span>
+</div>
+<div class="text-right shrink-0">
+<div class="font-headline-sm text-on-surface font-bold">104 000 FCFA</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+              Espèces
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- État Vide Alternatif (Invisibilisé par défaut pour la simulation) -->
+<div class="hidden p-space-xl bg-surface-container-lowest rounded-xl shadow-sm flex-col items-center justify-center text-center gap-space-sm" id="empty-state-sales">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[28px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-on-surface">Aucune vente enregistrée</span>
+<span class="font-body-sm text-outline mt-0.5">La vacation vient de débuter pour le dépôt central.</span>
+</div>
+<button class="mt-1 px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md">
+        Initier un ticket de caisse
+      </button>
+</div>
+</section>
+<!-- Script d'interaction Client : Rôles et Simulateur -->
+<script>
+    function switchRole(role) {
+      const btnAdmin = document.getElementById('role-btn-admin');
+      const btnCashier = document.getElementById('role-btn-cashier');
+      const btnStock = document.getElementById('role-btn-stock');
+      const analyticsSection = document.getElementById('section-analytics');
+      const alertsSection = document.getElementById('section-alerts');
+
+      // Réinitialiser les styles des boutons
+      [btnAdmin, btnCashier, btnStock].forEach(b => {
+        b.className = 'py-1.5 px-2 rounded-md text-on-surface-variant hover:text-on-surface text-center truncate transition-all';
+      });
+
+      if (role === 'admin') {
+        btnAdmin.className = 'py-1.5 px-2 rounded-md bg-primary text-on-primary text-center truncate shadow-sm transition-all';
+        analyticsSection.style.display = 'flex';
+        alertsSection.style.display = 'flex';
+      } else if (role === 'cashier') {
+        btnCashier.className = 'py-1.5 px-2 rounded-md bg-primary text-on-primary text-center truncate shadow-sm transition-all';
+        // En vue caissier : masquage des graphiques stratégiques globaux
+        analyticsSection.style.display = 'none';
+        alertsSection.style.display = 'flex';
+      } else if (role === 'stock') {
+        btnStock.className = 'py-1.5 px-2 rounded-md bg-primary text-on-primary text-center truncate shadow-sm transition-all';
+        analyticsSection.style.display = 'none';
+        alertsSection.style.display = 'flex';
+      }
+    }
+
+    function simulateState(state) {
+      const offlineBanner = document.getElementById('offline-banner');
+      const txList = document.getElementById('transactions-list');
+      const emptyState = document.getElementById('empty-state-sales');
+      const caVal = document.getElementById('ca-val');
+      const ordersCount = document.getElementById('kpi-orders-count');
+
+      if (state === 'offline') {
+        offlineBanner.classList.remove('hidden');
+        txList.classList.remove('hidden');
+        emptyState.classList.add('hidden');
+      } else if (state === 'empty') {
+        offlineBanner.classList.add('hidden');
+        txList.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        caVal.innerHTML = '0';
+        ordersCount.innerHTML = '0';
+      } else {
+        // Normal
+        offlineBanner.classList.add('hidden');
+        txList.classList.remove('hidden');
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+        caVal.innerHTML = '3&nbsp;850&nbsp;000';
+        ordersCount.innerHTML = '48';
+      }
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(23,32,51,0.06)]" data-active-classes="text-secondary font-bold"><div class="max-w-[430px] mx-auto flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="accueil-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ventes" href="#"><span class="material-symbols-outlined text-[22px]">point_of_sale</span><span class="font-label-sm">Ventes</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="stock-casiers" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm">Stock</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="clients-credits" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm">Clients</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu-plus" href="#"><span class="material-symbols-outlined text-[22px]">more_horiz</span><span class="font-label-sm">Plus</span></a></div></nav></body></html>

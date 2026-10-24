@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#0b1c30", "surface-bright": "#f8f9ff", "on-primary-fixed-variant": "#264774", "secondary-fixed-dim": "#abc7ff", "surface-container-low": "#eff4ff", "on-error": "#ffffff", "on-background": "#0b1c30", "on-secondary-fixed": "#001b3f", "on-secondary-fixed-variant": "#004590", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-secondary-container": "#00285a", "outline": "#737780", "outline-variant": "#c3c6d0", "primary-fixed-dim": "#a8c8fc", "secondary-container": "#488ffd", "surface-container-highest": "#d3e4ff", "surface": "#f8f9ff", "tertiary-container": "#00451a", "secondary-fixed": "#d7e2ff", "on-surface-variant": "#43474f", "tertiary-fixed": "#7ffc97", "on-primary-container": "#86a6d8", "tertiary-fixed-dim": "#62df7d", "surface-container": "#e6eeff", "surface-variant": "#d3e4ff", "primary-container": "#173b67", "on-primary": "#ffffff", "surface-container-high": "#dce9ff", "on-error-container": "#93000a", "background": "#f8f9ff", "error": "#ba1a1a", "inverse-on-surface": "#eaf1ff", "on-primary-fixed": "#001c3b", "on-tertiary-fixed-variant": "#005320", "inverse-primary": "#a8c8fc", "secondary": "#005cbd", "on-tertiary-fixed": "#002109", "inverse-surface": "#213146", "primary-fixed": "#d5e3ff", "on-tertiary-container": "#3bbc5f", "primary": "#00254b", "on-secondary": "#ffffff", "surface-dim": "#cbdbf6", "surface-tint": "#3f5f8d", "tertiary": "#002c0e" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "margin": "1rem", "gutter": "0.75rem", "space-md": "0.75rem", "space-xl": "1.5rem" }, fontFamily: { "label-lg": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "display-currency": ["Inter"], "label-sm": ["Inter"] }, fontSize: { "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "display-currency": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><button aria-label="Retour" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md text-on-surface tracking-tight truncate">Detail Produit</h1></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-[0_1px_3px_rgba(23,32,51,0.08)] hover:bg-primary-container transition-colors"><span class="material-symbols-outlined text-[18px]">check</span><span>Enregistrer</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-24 gap-y-space-lg">
+<!-- 1. En-tête de fiche produit & Visuel -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container shadow-sm flex flex-col">
+<!-- Visual area with realistic beverage Depot context -->
+<div class="relative w-full h-48 bg-primary-container overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cold condensation-covered amber glass bottle of Castel Beer 65cl sitting atop sturdy stacked blue plastic bottle crates inside a sunlit commercial beverage depot warehouse in Douala Cameroon, warm vibrant lighting, hyper-realistic, depth of field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrAjuGcBNqkmJJgWAcffQHXZxjypDfqcSR11HJ-dQ_C1Lr77xXqCzoJkfz2bnBxG_4ihE_iIpoA_OZqETzHFyrWviGe1LPAtjGDOGR29IJIF_XXab86bUnjFSXohYGEbD7IzPuIRzj6drB_6sEXLrGioQ0nC5DrCj3gpqiMeee8bWsNQjMusb6P6lk6xtyKcHHoIvGsN9knbhuQtRNZde3RfRyssF4x11RJMc-BENzdnoSp7F_5twLKQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent"></div>
+<!-- Top Badges Floating -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-fixed animate-pulse"></span>
+          Actif • En vente
+        </span>
+<button aria-label="Favori" class="w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors" id="favoriteBtn" onclick="toggleFavorite()">
+<span class="material-symbols-outlined text-[18px]" id="favIcon">favorite_border</span>
+</button>
+</div>
+<!-- Bottom Overlay Info inside Hero -->
+<div class="absolute bottom-3 left-3 right-3 flex flex-col text-on-primary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-primary-fixed-dim mb-0.5">Bière blonde • Brasseries du Cameroun (SABC)</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-primary leading-tight">Castel Beer 65cl</h2>
+</div>
+</div>
+<!-- Metadata Strip -->
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between text-on-surface-variant gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">inventory_2</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold truncate">REF-BST-065</span>
+</div>
+<div class="h-3 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">barcode_scanner</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant tracking-wider font-mono truncate">6151100123456</span>
+</div>
+</div>
+</div>
+<!-- 2. Sélecteur interactif de vue de permission de rôle -->
+<div class="w-full bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">admin_panel_settings</span>
+<span class="font-label-lg text-label-lg text-on-surface">Mode d'affichage des marges</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">Simulateur</span>
+</div>
+<!-- Segmented control tabs -->
+<div class="grid grid-cols-2 gap-1 p-1 bg-surface-container rounded-lg">
+<button class="py-2 px-3 rounded text-center font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary text-on-primary shadow-sm" id="btnRoleAdmin" onclick="switchRole('admin')">
+<span class="material-symbols-outlined text-[16px]">shield_person</span>
+<span>Gérant / Admin</span>
+</button>
+<button class="py-2 px-3 rounded text-center font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="btnRoleSeller" onclick="switchRole('seller')">
+<span class="material-symbols-outlined text-[16px]">point_of_sale</span>
+<span>Vendeur / Caisse</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5" id="roleNotice">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">verified</span>
+<span>Accès complet : Affichage des coûts et rentabilités brutes.</span>
+</p>
+</div>
+<!-- 3. Grille des Tarifs Publics et Consignes -->
+<div class="flex flex-col gap-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tarification Commerciale</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Devise en FCFA</span>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Prix de vente public -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-md text-label-md uppercase">Vente Casier</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">payments</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">7 800 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">FCFA</span></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">650 FCFA / bouteille</span>
+</div>
+</div>
+<!-- Caution consigne -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-md text-label-md uppercase">Caution Casier</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">recycling</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">3 000 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">FCFA</span></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-0.5">12 alvéoles consignées</span>
+</div>
+</div>
+</div>
+<!-- 3.B Section Réservée Administrateur (Marges et Achats) -->
+<div class="p-space-lg rounded-xl bg-surface-container-high transition-all duration-300" id="adminConfidentialBox">
+<div class="flex items-center justify-between mb-3 pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">Données Rentabilité Dépôt</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-semibold">Strict Gérant</span>
+</div>
+<!-- Données visibles en Admin -->
+<div class="flex flex-col gap-3" id="adminDataVisible">
+<div class="flex items-center justify-between py-1.5">
+<span class="font-body-md text-body-md text-on-surface-variant">Prix d'Achat Usine (SABC)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">6 400 FCFA <span class="text-on-surface-variant font-normal text-body-sm">/casier</span></span>
+</div>
+<div class="flex items-center justify-between py-1.5 rounded-lg bg-surface-container-lowest px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Marge Brute / Casier</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-container font-medium">+17,95% marge commerciale</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-tertiary-container font-bold">+1 400 FCFA</div>
+</div>
+<div class="flex items-center justify-between py-1.5">
+<span class="font-body-md text-body-md text-on-surface-variant">Marge cumulée stock en quai</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+117 600 FCFA</span>
+</div>
+</div>
+<!-- Données masquées en mode Vendeur -->
+<div class="hidden flex flex-col items-center justify-center py-6 text-center text-on-surface-variant" id="adminDataHidden">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[24px] text-outline">visibility_off</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface">Informations Financières Verrouillées</p>
+<p class="font-body-sm text-body-sm text-outline mt-1 max-w-[260px]">
+          Conformément aux règles de sécurité, le prix d'achat et la marge nette sont masqués pour le personnel de caisse.
+        </p>
+</div>
+</div>
+</div>
+<!-- 4. État du Stock Physique & Alertes au Dépôt -->
+<div class="flex flex-col gap-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Stock Physique &amp; Entrepôt</h3>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Stock Conforme</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<!-- Jauge et volume disponible -->
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant block">Disponible immédiat</span>
+<div class="flex items-baseline gap-1.5 mt-0.5">
+<span class="font-display-currency text-display-currency text-on-surface font-extrabold tracking-tight">84</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">casiers</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Soit 1 008 bouteilles de 65cl</span>
+</div>
+<!-- Graphique circulaire SVG compact du stock -->
+<div class="relative w-16 h-16 flex items-center justify-center shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-tertiary-fixed-dim" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="84, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-md text-label-md font-bold text-on-surface">84%</span>
+</div>
+</div>
+<!-- Barre de seuil -->
+<div class="flex flex-col gap-1.5">
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 84%;"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>Seuil critique sécurité : 15 casiers</span>
+<span>Plein quai : 100 casiers</span>
+</div>
+</div>
+<!-- Localisation et réapprovisionnement -->
+<div class="pt-3 flex flex-col gap-2">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">warehouse</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface">Emplacement stockage</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Allée B - Travée 04 (Quai Principal Akwa)</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface">Dernier réapprovisionnement</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">24/10/2023 • Camion Brasserie SABC</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Historique récent des mouvements -->
+<div class="flex flex-col gap-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Historique des Flux Récents</h3>
+<button class="font-label-md text-label-md text-secondary hover:underline flex items-center gap-0.5">
+<span>Voir tout</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm divide-y-0 flex flex-col">
+<!-- Mouvement 1 -->
+<div class="p-space-md flex items-center justify-between gap-2 hover:bg-surface-container-low transition-colors rounded-t-xl">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Vente #VF-2023-0942</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aujourd'hui à 11:24 • Comptoir</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-lg text-label-lg text-error font-bold">-3 casiers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">-36 blles</span>
+</div>
+</div>
+<!-- Mouvement 2 -->
+<div class="p-space-md flex items-center justify-between gap-2 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Vente #VF-2023-0938</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aujourd'hui à 09:50 • Bar La Gaieté</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-lg text-label-lg text-error font-bold">-8 casiers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">-96 blles</span>
+</div>
+</div>
+<!-- Mouvement 3 -->
+<div class="p-space-md flex items-center justify-between gap-2 hover:bg-surface-container-low transition-colors rounded-b-xl">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">call_received</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Réception Bon #BL-8841</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">24/10/2023 • Livraison SABC Usine</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-lg text-label-lg text-tertiary font-bold">+50 casiers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+600 blles</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. Panneau d'Actions Contextuelles & Gestion -->
+<div class="flex flex-col gap-2 pt-2">
+<!-- Action Primaire : Vendre cet article -->
+<button class="w-full h-[50px] rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 shadow-md hover:bg-primary-container active:scale-[0.99] transition-transform">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+<span>Vendre cet article (POS)</span>
+</button>
+<!-- Grille boutons secondaires -->
+<div class="grid grid-cols-2 gap-2">
+<!-- Modifier la fiche -->
+<button class="h-11 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Modifier fiche</span>
+</button>
+<!-- Ajuster le stock (Inventaire express) -->
+<button class="h-11 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Ajuster stock</span>
+</button>
+</div>
+<!-- Action destructive / Désactiver -->
+<button class="w-full mt-2 py-2.5 rounded-lg text-error hover:bg-error-container/30 transition-colors font-label-md text-label-md flex items-center justify-center gap-1.5" onclick="confirmDeactivate()">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+<span>Désactiver ou archiver ce produit</span>
+</button>
+</div>
+</div>
+<script>
+  function switchRole(role) {
+    const btnAdmin = document.getElementById('btnRoleAdmin');
+    const btnSeller = document.getElementById('btnRoleSeller');
+    const notice = document.getElementById('roleNotice');
+    const adminDataVisible = document.getElementById('adminDataVisible');
+    const adminDataHidden = document.getElementById('adminDataHidden');
+
+    if (role === 'admin') {
+      btnAdmin.className = "py-2 px-3 rounded text-center font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary text-on-primary shadow-sm";
+      btnSeller.className = "py-2 px-3 rounded text-center font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface";
+      notice.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">verified</span><span>Accès complet : Affichage des coûts et rentabilités brutes.</span>';
+      
+      adminDataVisible.classList.remove('hidden');
+      adminDataHidden.classList.add('hidden');
+    } else {
+      btnSeller.className = "py-2 px-3 rounded text-center font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary text-on-primary shadow-sm";
+      btnAdmin.className = "py-2 px-3 rounded text-center font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface";
+      notice.innerHTML = '<span class="material-symbols-outlined text-[16px] text-error">lock</span><span>Mode Vendeur : Prix d\'achat et marges masqués pour confidentialité.</span>';
+      
+      adminDataVisible.classList.add('hidden');
+      adminDataHidden.classList.remove('hidden');
+    }
+  }
+
+  function toggleFavorite() {
+    const icon = document.getElementById('favIcon');
+    if (icon.innerText === 'favorite_border') {
+      icon.innerText = 'favorite';
+      icon.classList.add('text-error');
+      icon.style.fontVariationSettings = "'FILL' 1";
+    } else {
+      icon.innerText = 'favorite_border';
+      icon.classList.remove('text-error');
+      icon.style.fontVariationSettings = "'FILL' 0";
+    }
+  }
+
+  function confirmDeactivate() {
+    if (confirm("Voulez-vous vraiment désactiver la référence Castel Beer 65cl du catalogue de vente ?")) {
+      alert("Le produit a été archivé avec succès.");
+    }
+  }
+</script></main></body></html>

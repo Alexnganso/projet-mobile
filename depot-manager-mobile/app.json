@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "DepotManager Mobile",
+    "slug": "depot-manager-mobile",
+    "version": "2.4.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#173B67",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "cm.akwa.depotmanager",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Scanner les codes-barres EAN-13 des bouteilles et casiers.",
+        "NSBluetoothAlwaysUsageDescription": "Se connecter aux imprimantes thermiques ESC/POS (58mm/80mm) du dépôt.",
+        "NSFaceIDUsageDescription": "Déverrouiller rapidement votre session de caisse suspendue."
+      }
+    },
+    "android": {
+      "package": "cm.akwa.depotmanager",
+      "adaptiveIcon": {
+        "backgroundColor": "#00254B"
+      },
+      "permissions": [
+        "CAMERA",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_SCAN",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Autoriser DepotManager à scanner les codes-barres des casiers et boissons."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Autoriser Face ID pour reprendre rapidement votre caisse."
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#62df7d", "inverse-primary": "#a8c8fc", "secondary-fixed": "#d7e2ff", "tertiary-fixed": "#7ffc97", "on-secondary-fixed": "#001b3f", "secondary-fixed-dim": "#abc7ff", "on-tertiary-container": "#3bbc5f", "on-error": "#ffffff", "on-primary-container": "#86a6d8", "surface-container": "#e6eeff", "on-background": "#0b1c30", "on-secondary": "#ffffff", "secondary-container": "#488ffd", "on-surface-variant": "#43474f", "surface": "#f8f9ff", "on-tertiary-fixed": "#002109", "surface-container-highest": "#d3e4ff", "error-container": "#ffdad6", "secondary": "#005cbd", "primary-container": "#173b67", "error": "#ba1a1a", "primary-fixed-dim": "#a8c8fc", "surface-container-high": "#dce9ff", "on-primary-fixed": "#001c3b", "surface-bright": "#f8f9ff", "surface-tint": "#3f5f8d", "surface-container-lowest": "#ffffff", "outline": "#737780", "on-secondary-fixed-variant": "#004590", "primary-fixed": "#d5e3ff", "on-secondary-container": "#00285a", "on-error-container": "#93000a", "outline-variant": "#c3c6d0", "inverse-surface": "#213146", "inverse-on-surface": "#eaf1ff", "on-tertiary": "#ffffff", "tertiary-container": "#00451a", "background": "#f8f9ff", "surface-variant": "#d3e4ff", "on-surface": "#0b1c30", "on-primary": "#ffffff", "on-primary-fixed-variant": "#264774", "tertiary": "#002c0e", "primary": "#00254b", "surface-container-low": "#eff4ff", "surface-dim": "#cbdbf6", "on-tertiary-fixed-variant": "#005320" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "margin": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem" }, "fontFamily": { "label-sm": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "display-currency": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "display-currency": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Retour" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md text-on-surface truncate">Reçu De Vente</h1></div><div class="flex items-center gap-space-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full px-margin pb-24 space-y-space-lg">
+<!-- Feedback de Succès & Décompte -->
+<div class="flex flex-col items-center text-center pt-space-md">
+<div class="relative flex items-center justify-center w-16 h-16 rounded-full bg-tertiary-fixed mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[36px] text-tertiary font-bold animate-bounce" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="absolute inset-0 rounded-full bg-tertiary-fixed-dim/40 animate-ping -z-10"></div>
+</div>
+<span class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-md text-label-md mb-space-xs">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+      Transaction Enregistrée
+    </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Vente Confirmée avec Succès !</h2>
+<div class="flex items-center justify-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm mt-space-xs">
+<span class="font-label-md text-label-md text-primary">#VF-2023-0943</span>
+<span>•</span>
+<span>Aujourd'hui à 11:42</span>
+</div>
+</div>
+<!-- Notification synchronisation des stocks -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-on-surface mb-0.5">Stocks physiques décrémentés</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+        -3 Castel Beer 65cl, -1 Top Ananas 1L. Sauvegarde locale synchronisée.
+      </p>
+</div>
+</div>
+<!-- Ticket Thermique Style Papier Réel avec Dentelures -->
+<div class="relative w-full rounded-t-xl bg-surface-container-lowest shadow-md overflow-hidden pt-space-lg px-space-lg pb-space-xl">
+<!-- Watermark / Marqueur visuel thermique -->
+<div class="text-center pb-space-md border-b-2 border-dashed border-outline-variant/40">
+<div class="inline-flex items-center justify-center p-space-xs rounded-full bg-surface-container mb-space-xs">
+<span class="material-symbols-outlined text-[22px] text-primary">sports_bar</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-wider uppercase text-on-surface">Dépôt Central Akwa</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Douala, Cameroun • Vente Comptoir</p>
+<p class="font-body-sm text-body-sm text-outline mt-space-xs">N° Caisse : #02 | Opérateur : Paul N. Tagne</p>
+</div>
+<!-- Informations Client et Session -->
+<div class="py-space-md space-y-space-xs border-b border-surface-container-high text-body-sm font-body-sm text-on-surface">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-body-sm">Client :</span>
+<span class="font-label-lg text-label-lg text-on-surface">Bar Restaurant Le Balafon</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-body-sm">Date &amp; Heure :</span>
+<span class="font-label-md text-label-md text-on-surface">26/10/2023 à 11:42</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-body-sm">Mode Paiement :</span>
+<span class="font-label-md text-label-md px-space-xs py-0.5 rounded bg-surface-container text-primary">Espèces (Cash)</span>
+</div>
+</div>
+<!-- Tableau Articles Détaillés -->
+<div class="py-space-md border-b-2 border-dashed border-outline-variant/40 space-y-space-md">
+<!-- Ligne 1 -->
+<div class="flex justify-between items-start">
+<div class="min-w-0 pr-space-sm">
+<div class="font-label-lg text-label-lg text-on-surface">Castel Beer 65cl</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">3 casiers (12 blles) × 7 800</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-lg text-label-lg text-on-surface">23 400</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-0.5">FCFA</span>
+</div>
+</div>
+<!-- Ligne 2 -->
+<div class="flex justify-between items-start">
+<div class="min-w-0 pr-space-sm">
+<div class="font-label-lg text-label-lg text-on-surface">Top Ananas 1L</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">1 casier (12 blles) × 6 000</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-lg text-label-lg text-on-surface">6 000</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-0.5">FCFA</span>
+</div>
+</div>
+<!-- Consignation Bilan Rapide -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">inventory_2</span>
+<span>4 Casiers Vides Échangés</span>
+</div>
+<span class="text-tertiary font-bold">0 Casier Dû</span>
+</div>
+</div>
+<!-- Règlement Financier -->
+<div class="py-space-md space-y-space-xs text-on-surface">
+<div class="flex justify-between items-baseline pt-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">TOTAL PAYÉ</span>
+<div class="text-right">
+<span class="font-display-currency text-display-currency text-primary">29 400</span>
+<span class="font-label-md text-label-md text-primary ml-1">FCFA</span>
+</div>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant pt-space-xs">
+<span>Montant Reçu (Espèces) :</span>
+<span class="font-label-md text-label-md text-on-surface">30 000 FCFA</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Monnaie Rendue :</span>
+<span class="font-label-md text-label-md text-tertiary font-bold">600 FCFA</span>
+</div>
+</div>
+<!-- QR Code de Sortie & Mention Quai -->
+<div class="mt-space-md pt-space-md border-t border-surface-container-high flex flex-col items-center text-center">
+<!-- Simulated Vector QR Code -->
+<div class="w-28 h-28 p-2 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-center relative">
+<svg class="w-full h-full text-on-surface" fill="currentColor" viewbox="0 0 100 100">
+<!-- Outer Positioning Boxes -->
+<path d="M5,5 h30 v30 h-30 z M10,10 v20 h20 v-20 z M15,15 h10 v10 h-10 z"></path>
+<path d="M65,5 h30 v30 h-30 z M70,10 v20 h20 v-20 z M75,15 h10 v10 h-10 z"></path>
+<path d="M5,65 h30 v30 h-30 z M10,70 v20 h20 v-20 z M15,75 h10 v10 h-10 z"></path>
+<!-- Data Pixels Mockup -->
+<rect height="6" width="6" x="42" y="8"></rect>
+<rect height="12" width="6" x="52" y="8"></rect>
+<rect height="6" width="16" x="42" y="20"></rect>
+<rect height="16" width="6" x="8" y="42"></rect>
+<rect height="6" width="10" x="20" y="48"></rect>
+<rect height="8" width="8" x="36" y="38"></rect>
+<rect height="6" width="12" x="50" y="38"></rect>
+<rect height="18" width="6" x="68" y="42"></rect>
+<rect height="6" width="12" x="80" y="48"></rect>
+<rect height="14" width="8" x="42" y="52"></rect>
+<rect height="24" width="6" x="56" y="52"></rect>
+<rect height="14" width="10" x="42" y="72"></rect>
+<rect height="8" width="8" x="70" y="70"></rect>
+<rect height="6" width="10" x="82" y="70"></rect>
+<rect height="6" width="24" x="68" y="84"></rect>
+</svg>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide mt-space-sm">Pass Sortie Quai de Chargement</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Présentez ce code aux magasiniers pour retrait des casiers.</p>
+<p class="font-label-sm text-label-sm text-outline-variant mt-space-xs italic">Marchandise vérifiée et emportée. Pas de retour sans ticket.</p>
+</div>
+<!-- Découpe dentelée papier (Scalloped edge effect via CSS inline) -->
+<div class="absolute -bottom-2.5 inset-x-0 h-4 flex justify-between overflow-hidden">
+<div class="w-full flex space-x-2 justify-center">
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+<span class="w-4 h-4 bg-surface rounded-full shrink-0"></span>
+</div>
+</div>
+</div>
+<!-- Actions d'exploitation prioritaires -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Bouton Imprimer Thermique ESC/POS -->
+<button class="w-full h-[52px] px-space-lg rounded-xl bg-primary-container text-on-primary flex items-center justify-center gap-space-sm shadow-md active:scale-[0.98] transition-transform" id="btnPrintTicket" type="button">
+<span class="material-symbols-outlined text-[24px]">print</span>
+<span class="font-label-lg text-label-lg">Imprimer Ticket (Bluetooth ESC/POS)</span>
+</button>
+<!-- Bouton Partager WhatsApp / SMS -->
+<button class="w-full h-[48px] px-space-lg rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center gap-space-sm shadow-sm active:scale-[0.98] transition-transform" id="btnShareClient" type="button">
+<span class="material-symbols-outlined text-[22px] text-tertiary">chat</span>
+<span class="font-label-lg text-label-lg">Envoyer WhatsApp (+237 699 45 28 10)</span>
+</button>
+<!-- Bouton Nouvelle Vente Rapide -->
+<button class="w-full h-[48px] px-space-lg rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center gap-space-sm active:scale-[0.98] transition-transform" id="btnNewSale" type="button">
+<span class="material-symbols-outlined text-[22px]">add_shopping_cart</span>
+<span class="font-label-lg text-label-lg">Nouvelle Vente (Retour Caisse)</span>
+</button>
+</div>
+<!-- Petit toast interactif de statut -->
+<div class="fixed bottom-6 inset-x-margin max-w-sm mx-auto p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center gap-space-sm translate-y-24 opacity-0 transition-all duration-300 pointer-events-none z-50" id="statusToast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]" id="toastIcon">check_circle</span>
+<span class="font-body-sm text-body-sm flex-1" id="toastMessage">Commande envoyée à l'imprimante thermique.</span>
+</div>
+</div>
+<script>
+  (function() {
+    const toast = document.getElementById('statusToast');
+    const toastMsg = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+    let toastTimeout;
+
+    function showToast(message, icon = 'check_circle') {
+      if (!toast) return;
+      toastMsg.textContent = message;
+      toastIcon.textContent = icon;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 2500);
+    }
+
+    const printBtn = document.getElementById('btnPrintTicket');
+    if (printBtn) {
+      printBtn.addEventListener('click', () => {
+        showToast('Envoi au terminal thermique RPP02N...', 'print');
+      });
+    }
+
+    const shareBtn = document.getElementById('btnShareClient');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', () => {
+        showToast('Ticket PDF généré & ouvert sur WhatsApp', 'share');
+      });
+    }
+
+    const newSaleBtn = document.getElementById('btnNewSale');
+    if (newSaleBtn) {
+      newSaleBtn.addEventListener('click', () => {
+        showToast('Réinitialisation du panier de caisse...', 'refresh');
+        setTimeout(() => {
+          if (window.history.length > 1) {
+            window.history.back();
+          }
+        }, 600);
+      });
+    }
+  })();
+</script></main></body></html>

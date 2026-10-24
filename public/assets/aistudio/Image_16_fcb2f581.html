@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#62df7d", "inverse-primary": "#a8c8fc", "secondary-fixed": "#d7e2ff", "tertiary-fixed": "#7ffc97", "on-secondary-fixed": "#001b3f", "secondary-fixed-dim": "#abc7ff", "on-tertiary-container": "#3bbc5f", "on-error": "#ffffff", "on-primary-container": "#86a6d8", "surface-container": "#e6eeff", "on-background": "#0b1c30", "on-secondary": "#ffffff", "secondary-container": "#488ffd", "on-surface-variant": "#43474f", "surface": "#f8f9ff", "on-tertiary-fixed": "#002109", "surface-container-highest": "#d3e4ff", "error-container": "#ffdad6", "secondary": "#005cbd", "primary-container": "#173b67", "error": "#ba1a1a", "primary-fixed-dim": "#a8c8fc", "surface-container-high": "#dce9ff", "on-primary-fixed": "#001c3b", "surface-bright": "#f8f9ff", "surface-tint": "#3f5f8d", "surface-container-lowest": "#ffffff", "outline": "#737780", "on-secondary-fixed-variant": "#004590", "primary-fixed": "#d5e3ff", "on-secondary-container": "#00285a", "on-error-container": "#93000a", "outline-variant": "#c3c6d0", "inverse-surface": "#213146", "inverse-on-surface": "#eaf1ff", "on-tertiary": "#ffffff", "tertiary-container": "#00451a", "background": "#f8f9ff", "surface-variant": "#d3e4ff", "on-surface": "#0b1c30", "on-primary": "#ffffff", "on-primary-fixed-variant": "#264774", "tertiary": "#002c0e", "primary": "#00254b", "surface-container-low": "#eff4ff", "surface-dim": "#cbdbf6", "on-tertiary-fixed-variant": "#005320" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "margin": "1rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem" }, "fontFamily": { "label-sm": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "display-currency": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "display-currency": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Retour" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md text-on-surface truncate">Règlement Et Mode De Paiement</h1></div><div class="flex items-center gap-space-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full">
+<!-- Dynamic Styles for Tabs and Interaction Transitions -->
+<style>
+    .tab-active-cash {
+      background-color: #00254b;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(0, 37, 75, 0.18);
+    }
+    .tab-inactive-cash {
+      background-color: #e6eeff;
+      color: #00254b;
+    }
+    .payment-option-card.selected {
+      background-color: #d7e2ff;
+      color: #001b3f;
+      transform: translateY(-1px);
+    }
+    .payment-option-card {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+<!-- Section 1: Récapitulatif Commande & Dépôt -->
+<div class="px-margin pt-space-md pb-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden">
+<!-- Decorative Accent Flash -->
+<div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-secondary-fixed/50 pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs relative z-10">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Montant Net à Régler</span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">inventory_2</span>
+          4 casiers pleins
+        </span>
+</div>
+<div class="flex items-baseline justify-between relative z-10">
+<div class="flex items-baseline gap-1.5">
+<span class="font-display-currency text-display-currency text-on-surface font-bold">29 400</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">FCFA</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
+          Consignes incluses
+        </span>
+</div>
+<!-- Quick Cart Mini-Breakdown -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs truncate">
+<span class="material-symbols-outlined text-[16px] text-primary">local_shipping</span>
+<span class="truncate">Facture Fact-2023-10-89 • Dépôt Akwa</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface shrink-0">4 Art.</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Sélecteur Binaire (Tabs Segmentés) -->
+<div class="px-margin py-space-sm">
+<div class="p-1 rounded-xl bg-surface-container flex gap-1">
+<button class="flex-1 py-3 px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs tab-active-cash transition-all duration-200" id="tabCashBtn" onclick="switchPaymentMode('cash')" type="button">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span>Comptant (Payé)</span>
+</button>
+<button class="flex-1 py-3 px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs tab-inactive-cash transition-all duration-200" id="tabCreditBtn" onclick="switchPaymentMode('credit')" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span>À Crédit (Terme)</span>
+</button>
+</div>
+</div>
+<!-- Section 3: Panneau OPTION 1 - VENTE PAYÉE (COMPTANT) -->
+<div class="flex flex-col px-margin pt-space-xs pb-space-lg space-y-space-md" id="cashPanel">
+<!-- Sous-sélecteur de Mode de règlement immédiat -->
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Canal d'encaissement</label>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-tertiary-fixed/60 px-space-sm py-0.5 rounded-full font-bold">Zéro dette client</span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm">
+<!-- Espèces -->
+<button class="payment-option-card selected p-space-md rounded-xl flex flex-col items-center justify-center text-center shadow-sm" id="channelCash" onclick="selectPaymentChannel('cash')" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center mb-space-xs text-primary">
+<span class="material-symbols-outlined text-[22px]">point_of_sale</span>
+</div>
+<span class="font-label-md text-label-md font-semibold">Espèces</span>
+<span class="font-label-sm text-label-sm opacity-80">Guichet</span>
+</button>
+<!-- Orange Money Cameroun -->
+<button class="payment-option-card bg-surface-container-lowest text-on-surface p-space-md rounded-xl flex flex-col items-center justify-center text-center shadow-sm" id="channelOM" onclick="selectPaymentChannel('om')" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center mb-space-xs text-secondary">
+<span class="material-symbols-outlined text-[22px]">phone_iphone</span>
+</div>
+<span class="font-label-md text-label-md font-semibold">OM</span>
+<span class="font-label-sm text-label-sm opacity-70">#150*50#</span>
+</button>
+<!-- MTN Mobile Money Cameroun -->
+<button class="payment-option-card bg-surface-container-lowest text-on-surface p-space-md rounded-xl flex flex-col items-center justify-center text-center shadow-sm" id="channelMoMo" onclick="selectPaymentChannel('momo')" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center mb-space-xs text-secondary">
+<span class="material-symbols-outlined text-[22px]">contactless</span>
+</div>
+<span class="font-label-md text-label-md font-semibold">MoMo</span>
+<span class="font-label-sm text-label-sm opacity-70">*126#</span>
+</button>
+</div>
+</div>
+<!-- Canal Specifique : Espèces & Rendu monnaie -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md" id="cashDetailsBox">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="amountReceivedInput">Montant Reçu en Caisse</label>
+<span class="font-label-sm text-label-sm text-primary font-bold">Total Facture : 29 400 F</span>
+</div>
+<!-- Input Champ Saisie Cash -->
+<div class="relative flex items-center">
+<div class="absolute left-space-md flex items-center text-on-surface-variant pointer-events-none">
+<span class="material-symbols-outlined text-[20px]">attach_money</span>
+</div>
+<input class="w-full h-12 pl-10 pr-16 bg-surface-container-low rounded-lg font-headline-md text-headline-md text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" id="amountReceivedInput" inputmode="numeric" oninput="computeChange()" placeholder="0" type="number" value="30000"/>
+<span class="absolute right-space-md font-label-md text-label-md text-on-surface-variant pointer-events-none">FCFA</span>
+</div>
+<!-- Quick Cash Suggestion Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1">
+<button class="px-space-md py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm shrink-0 active:scale-95 transition-transform" onclick="setCashInput(29400)" type="button">
+          Compte exact
+        </button>
+<button class="px-space-md py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold shrink-0 active:scale-95 transition-transform" onclick="setCashInput(30000)" type="button">
+          30 000 F
+        </button>
+<button class="px-space-md py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm shrink-0 active:scale-95 transition-transform" onclick="setCashInput(35000)" type="button">
+          35 000 F
+        </button>
+<button class="px-space-md py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm shrink-0 active:scale-95 transition-transform" onclick="setCashInput(40000)" type="button">
+          40 000 F
+        </button>
+</div>
+<!-- Dynamic Change Display Box -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-center justify-between" id="changeReturnBox">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest text-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">currency_exchange</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Monnaie à Rendre</div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface" id="changeValue">+600 FCFA</div>
+</div>
+</div>
+<div class="font-label-sm text-label-sm px-space-sm py-1 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-semibold" id="changeBadgeStatus">
+          Prêt à solder
+        </div>
+</div>
+</div>
+<!-- Canal Specifique : Mobile Money (Hidden initially) -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md" id="momoDetailsBox">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">sim_card</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold" id="momoProviderName">Orange Money Cameroun</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="momoProviderHelp">Saisir le numéro marchand ou le contact payeur</p>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Numéro de Téléphone (+237)</label>
+<div class="relative flex items-center">
+<span class="absolute left-space-md font-label-lg text-label-lg text-on-surface-variant">+237</span>
+<input class="w-full h-12 pl-16 pr-space-md bg-surface-container-low rounded-lg font-label-lg text-label-lg text-on-surface focus:outline-none focus:bg-surface-container-lowest" id="mobilePhoneInput" type="tel" value="699 45 82 10"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Une notification push USSD sera envoyée instantanément au client pour confirmation de débit PIN.
+        </p>
+</div>
+</div>
+</div>
+<!-- Section 4: Panneau OPTION 2 - VENTE À CRÉDIT (À TERME) -->
+<div class="hidden flex-col px-margin pt-space-xs pb-space-lg space-y-space-md" id="creditPanel">
+<!-- Alerte Règle Métier Client Obligatoire -->
+<div class="bg-secondary-fixed p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[20px]">verified_user</span>
+<span class="font-label-md text-label-md text-on-secondary-fixed font-semibold">Client identifié requis pour crédit</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed bg-surface-container-lowest/80 px-2 py-0.5 rounded-full font-bold">Vérifié</span>
+</div>
+<!-- Fiche Client & Solde Débiteur -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<!-- Client Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center font-bold font-headline-sm">
+            LB
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Bar Le Balafon</h3>
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Akwa Nord • ID: CLT-7429</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+<!-- Décompte Financier Additionnel -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm">
+<!-- Ancien solde -->
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant">Ancien solde débiteur :</span>
+<span class="font-semibold text-on-surface">65 000 FCFA</span>
+</div>
+<!-- Vente courante -->
+<div class="flex items-center justify-between font-body-md text-body-md">
+<span class="text-error font-medium">+ Nouvelle commande :</span>
+<span class="font-bold text-error">+29 400 FCFA</span>
+</div>
+<div class="h-px bg-surface-container-highest my-space-xs"></div>
+<!-- Total cumulé -->
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">Nouveau Total Dû :</span>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold text-error">94 400 FCFA</span>
+</div>
+</div>
+</div>
+<!-- Plafond de crédit indicateur (Gauge) -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Plafond encours utilisé (94 400 / 300 000 FCFA)</span>
+<span class="text-on-tertiary-container font-bold">31.4% • Éligible</span>
+</div>
+<!-- Progress track -->
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 31.4%;"></div>
+</div>
+</div>
+<!-- Sélecteur Date d'échéance -->
+<div class="pt-space-xs space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1" for="dueDateInput">
+<span class="material-symbols-outlined text-[16px] text-primary">event</span>
+          Date d'échéance convenue de règlement
+        </label>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="due-chip py-2 px-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold text-center focus:bg-primary-container focus:text-on-primary" onclick="setDueDate('48h', this)" type="button">
+            48h (28 Oct)
+          </button>
+<button class="due-chip py-2 px-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold text-center focus:bg-primary-container focus:text-on-primary" onclick="setDueDate('7j', this)" type="button">
+            7 Jours (2 Nov)
+          </button>
+<button class="due-chip py-2 px-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold text-center focus:bg-primary-container focus:text-on-primary" onclick="setDueDate('15j', this)" type="button">
+            15 Jours
+          </button>
+</div>
+<div class="relative mt-space-xs">
+<input class="w-full h-11 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none" id="dueDateInput" type="date" value="2023-10-28"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Bouton de validation dynamique adaptatif -->
+<div class="px-margin pt-space-xs pb-space-md">
+<!-- CTA Button Encaisser / Valider Crédit -->
+<button class="w-full h-14 rounded-xl font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-sm shadow-md transition-all active:scale-[0.99] text-white bg-on-tertiary-container" id="submitValidationBtn" onclick="handleValidation()" type="button">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span id="submitBtnText">Valider le Paiement &amp; Émettre Reçu (29 400 FCFA)</span>
+</button>
+</div>
+<!-- Section 6: Note de Sécurité Réseau & Mode Hors Ligne (SQLite Local) -->
+<div class="px-margin pb-space-xl">
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+</div>
+<div class="flex-1">
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium leading-relaxed">
+<strong class="text-on-surface">Sauvegarde locale active :</strong> En cas de déconnexion réseau, la vente est sauvegardée en base locale SQLite et transmise au serveur Akwa dès reconnexion.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentPaymentMode = 'cash'; // 'cash' or 'credit'
+  let currentChannel = 'cash'; // 'cash', 'om', 'momo'
+  const netDue = 29400;
+
+  function switchPaymentMode(mode) {
+    currentPaymentMode = mode;
+    const tabCash = document.getElementById('tabCashBtn');
+    const tabCredit = document.getElementById('tabCreditBtn');
+    const cashPanel = document.getElementById('cashPanel');
+    const creditPanel = document.getElementById('creditPanel');
+    const submitBtn = document.getElementById('submitValidationBtn');
+    const submitText = document.getElementById('submitBtnText');
+
+    if (mode === 'cash') {
+      tabCash.className = "flex-1 py-3 px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs tab-active-cash transition-all duration-200";
+      tabCredit.className = "flex-1 py-3 px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs tab-inactive-cash transition-all duration-200";
+      cashPanel.classList.remove('hidden');
+      creditPanel.classList.add('hidden');
+
+      // Style Bouton Vert Payé (#16a34a / on-tertiary-container)
+      submitBtn.className = "w-full h-14 rounded-xl font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-sm shadow-md transition-all active:scale-[0.99] text-white bg-on-tertiary-container";
+      submitText.textContent = "Valider le Paiement & Émettre Reçu (29 400 FCFA)";
+    } else {
+      tabCredit.className = "flex-1 py-3 px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs tab-active-cash transition-all duration-200";
+      tabCash.className = "flex-1 py-3 px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs tab-inactive-cash transition-all duration-200";
+      cashPanel.classList.add('hidden');
+      creditPanel.classList.remove('hidden');
+
+      // Style Bouton Bleu Foncé Crédit (#173b67 / primary-container)
+      submitBtn.className = "w-full h-14 rounded-xl font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-sm shadow-md transition-all active:scale-[0.99] text-white bg-primary-container";
+      submitText.textContent = "Enregistrer la Vente à Crédit (94 400 FCFA dus)";
+    }
+  }
+
+  function selectPaymentChannel(channel) {
+    currentChannel = channel;
+    const btnCash = document.getElementById('channelCash');
+    const btnOM = document.getElementById('channelOM');
+    const btnMoMo = document.getElementById('channelMoMo');
+    const cashBox = document.getElementById('cashDetailsBox');
+    const momoBox = document.getElementById('momoDetailsBox');
+    const momoTitle = document.getElementById('momoProviderName');
+    const phoneInput = document.getElementById('mobilePhoneInput');
+
+    [btnCash, btnOM, btnMoMo].forEach(btn => {
+      btn.classList.remove('selected', 'bg-surface-container-lowest', 'text-on-surface');
+      btn.classList.add('bg-surface-container-lowest', 'text-on-surface');
+    });
+
+    if (channel === 'cash') {
+      btnCash.classList.add('selected');
+      cashBox.classList.remove('hidden');
+      momoBox.classList.add('hidden');
+    } else {
+      cashBox.classList.add('hidden');
+      momoBox.classList.remove('hidden');
+      if (channel === 'om') {
+        btnOM.classList.add('selected');
+        momoTitle.textContent = "Orange Money Cameroun";
+        phoneInput.value = "699 45 82 10";
+      } else {
+        btnMoMo.classList.add('selected');
+        momoTitle.textContent = "MTN Mobile Money Cameroun";
+        phoneInput.value = "677 34 19 88";
+      }
+    }
+  }
+
+  function computeChange() {
+    const input = document.getElementById('amountReceivedInput');
+    const changeLabel = document.getElementById('changeValue');
+    const badge = document.getElementById('changeBadgeStatus');
+    const val = parseFloat(input.value) || 0;
+    const diff = val - netDue;
+
+    if (diff >= 0) {
+      changeLabel.textContent = "+" + diff.toLocaleString('fr-FR') + " FCFA";
+      changeLabel.className = "font-headline-md text-headline-md font-bold text-on-surface";
+      badge.textContent = diff === 0 ? "Compte rond" : "Monnaie calculée";
+      badge.className = "font-label-sm text-label-sm px-space-sm py-1 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-semibold";
+    } else {
+      changeLabel.textContent = "Manque " + Math.abs(diff).toLocaleString('fr-FR') + " FCFA";
+      changeLabel.className = "font-headline-md text-headline-md font-bold text-error";
+      badge.textContent = "Insuffisant";
+      badge.className = "font-label-sm text-label-sm px-space-sm py-1 rounded-md bg-error-container text-on-error-container font-semibold";
+    }
+  }
+
+  function setCashInput(amount) {
+    const input = document.getElementById('amountReceivedInput');
+    input.value = amount;
+    computeChange();
+  }
+
+  function setDueDate(range, btn) {
+    const input = document.getElementById('dueDateInput');
+    const today = new Date();
+    if (range === '48h') {
+      today.setDate(today.getDate() + 2);
+    } else if (range === '7j') {
+      today.setDate(today.getDate() + 7);
+    } else if (range === '15j') {
+      today.setDate(today.getDate() + 15);
+    }
+    input.value = today.toISOString().split('T')[0];
+  }
+
+  function handleValidation() {
+    const btn = document.getElementById('submitValidationBtn');
+    btn.style.transform = "scale(0.97)";
+    setTimeout(() => {
+      btn.style.transform = "none";
+      if (currentPaymentMode === 'cash') {
+        alert("Encaissement comptant validé avec succès ! Impression du reçu thermique en cours...");
+      } else {
+        alert("Vente à terme enregistrée pour le client 'Bar Le Balafon'. Facture crédit générée !");
+      }
+    }, 150);
+  }
+
+  // Initial Calculation
+  computeChange();
+</script></main></body></html>

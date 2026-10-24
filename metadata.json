@@ -1,0 +1,6 @@
+{
+  "name": "DepotManager Mobile — Studio & Architecture iOS/Android",
+  "description": "Application mobile hybride iOS & Android (React Native / Expo / TypeScript) et simulateur interactif complet pour la gestion commerciale des dépôts de boissons au Cameroun.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
